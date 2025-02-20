@@ -1,3 +1,40 @@
-theme: minima
-title: NMI
-description: No more information needed!
+# Site settings
+title: THE ZIGGER ZONE
+description: "Welcome to THE ZIGGER ZONE - a wild, mysterious place on the web!"
+url: "https://username.github.io" # Replace with your GitHub Pages URL
+baseurl: "" # Leave empty if site is at root (e.g., username.github.io), or set to "/repo-name" for project sites
+
+# Owner info
+author: 
+  name: "ZIGGER ZAFER" # Replace with your name or alias
+  email: "FATBOYZIG@ZIGMAIL.com" # Optional
+
+# Build settings
+theme: minima # A default Jekyll theme; you can change this (e.g., "jekyll-theme-cayman")
+markdown: kramdown # Markdown processor
+permalink: pretty # Makes URLs look like /year/month/day/title
+
+# Plugins (optional, uncomment to use)
+plugins:
+  - jekyll-feed # Adds an RSS feed
+  - jekyll-seo-tag # Improves SEO
+
+# Collections (optional, e.g., for blog posts or custom pages)
+collections:
+  zigger_posts:
+    output: true
+    permalink: /zigger/:title
+
+# Default settings for files (optional)
+defaults:
+  - scope:
+      path: ""
+      type: "zigger_posts"
+    values:
+      layout: "post"
+
+# Exclude files from processing (optional)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
