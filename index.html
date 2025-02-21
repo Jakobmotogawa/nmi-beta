@@ -1,0 +1,67 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>THE ZIGGER ZONE</title>
+    <style>
+        body {
+            background: #0a0a23;
+            color: #00ffcc;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3em;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px #00ffcc;
+            animation: glitch 2s infinite;
+        }
+        #zigger-weight {
+            font-size: 2em;
+            margin: 20px;
+            padding: 10px;
+            background: #1a1a3d;
+            border: 2px solid #00ffcc;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-5px, 5px); }
+            40% { transform: translate(5px, -5px); }
+            60% { transform: translate(-5px, 0); }
+            80% { transform: translate(5px, 0); }
+            100% { transform: translate(0); }
+        }
+    </style>
+</head>
+<body>
+    <h1>THE ZIGGER ZONE</h1>
+    <p>BEHOLD THE EVER-GROWING WEIGHT OF ZIGGER:</p>
+    <div id="zigger-weight">Calculating...</div>
+
+    <script>
+        // Zigger weight calculation
+        const startDate = new Date("{{ site.zigger_start_date }}"); // From _config.yml
+        const startWeight = {{ site.zigger_start_weight }}; // From _config.yml
+        const weightIncreasePerDay = 0.13; // Pounds per day
+
+        // Get current date
+        const today = new Date();
+        const timeDiff = today - startDate;
+        const daysPassed = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+        // Calculate current weight
+        const currentWeight = startWeight + (daysPassed * weightIncreasePerDay);
+        
+        // Display weight with quirky formatting
+        document.getElementById("zigger-weight").innerHTML = 
+            `${currentWeight.toFixed(2)} lbs of PURE ZIGGER ENERGY`;
+    </script>
+</body>
+</html>
+
