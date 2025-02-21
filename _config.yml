@@ -1,39 +1,29 @@
 # Site settings
 title: THE ZIGGER ZONE
-description: "Welcome to THE ZIGGER ZONE - a wild, mysterious place on the web!"
+description: "A cosmic anomaly where Zigger’s weight defies spacetime—0.13 lbs heavier each day!"
 url: "https://username.github.io" # Replace with your GitHub Pages URL
-baseurl: "" # Leave empty if site is at root (e.g., username.github.io), or set to "/repo-name" for project sites
+baseurl: "" # Adjust if needed (e.g., "/zigger-zone")
 
-# Owner info
+# Author info
 author: 
-  name: "ZIGGER ZAFER" # Replace with your name or alias
-  email: "FATBOYZIG@ZIGMAIL.com" # Optional
+  name: "Ziggertron 3000" # A quirky alias
+  email: "zigger@intergalactic.zone" # Futuristic flair
 
 # Build settings
-theme: minima # A default Jekyll theme; you can change this (e.g., "jekyll-theme-cayman")
-markdown: kramdown # Markdown processor
-permalink: pretty # Makes URLs look like /year/month/day/title
+theme: jekyll-theme-midnight # Dark, futuristic theme (or try "jekyll-theme-hacker")
+markdown: kramdown
+permalink: /:title # Quirky, simple URLs
 
-# Plugins (optional, uncomment to use)
+# Plugins for extra zing
 plugins:
-  - jekyll-feed # Adds an RSS feed
-  - jekyll-seo-tag # Improves SEO
+  - jekyll-feed
+  - jekyll-seo-tag
 
-# Collections (optional, e.g., for blog posts or custom pages)
-collections:
-  zigger_posts:
-    output: true
-    permalink: /zigger/:title
+# Custom variables (used in templates)
+zigger_start_date: "2025-02-20" # Starting date for Zigger’s weight
+zigger_start_weight: 0 # Starting weight in pounds
 
-# Default settings for files (optional)
-defaults:
-  - scope:
-      path: ""
-      type: "zigger_posts"
-    values:
-      layout: "post"
-
-# Exclude files from processing (optional)
+# Exclude unnecessary files
 exclude:
   - Gemfile
   - Gemfile.lock
